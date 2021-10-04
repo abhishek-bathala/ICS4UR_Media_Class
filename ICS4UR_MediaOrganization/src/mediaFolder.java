@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class mediaFolder {
-    private ArrayList<MediaTypes> mediaTypes;
+    private ArrayList<MediaType> mediaTypes;
     private String filePath;
     private static int totalMedia;
 
