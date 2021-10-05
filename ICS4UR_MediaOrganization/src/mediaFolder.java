@@ -34,6 +34,26 @@ public class mediaFolder {
         totalMedia++;
     }
 
+    public void listMedia()
+    {
+        for(int i = 0; i < mediaTypes.size(); i++){
+            System.out.printf("%s", this.getClass());
+        }
+    }
+    
+    public void cleanUp()
+    {
+        for(int i = 0; i < mediaTypes.size(); i++){
+            for(int j = i; j < mediaTypes.size(); j++){
+                if(mediaTypes.get(i).equals(mediaTypes.get(j))){
+                    mediaTypes.remove(j);
+                }
+            }
+        }
+    }
 
-
+    public void openMedia(int index)
+    {
+        System.out.println("Opening " + mediaTypes.get(index).getName() + " with " + mediaTypes.get(index).getDefaultApp());
+    }
 }
