@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class mediaFolder {
+   
     private ArrayList<MediaType> mediaTypes;
     private static int totalMedia;
 
@@ -55,5 +56,10 @@ public class mediaFolder {
     public void openMedia(int index)
     {
         System.out.println("Opening " + mediaTypes.get(index).getName() + " with " + mediaTypes.get(index).getDefaultApp());
+    } 
+    
+    @Override
+    public String toString() {
+        return "mediaFolder [mediaTypes=" + mediaTypes + "]";
     }
 }
