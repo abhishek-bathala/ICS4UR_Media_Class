@@ -80,6 +80,8 @@ public class MediaType {
         this.filePath = filePath;
     }
 
-
+    public boolean isEqual(MediaType that){
+      //  return (this.getFileExtension().equals(that.getFileExtension()))&&(this.fileSize&&that.fileSize)
+    }
 
 }
