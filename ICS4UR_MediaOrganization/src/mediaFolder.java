@@ -58,6 +58,29 @@ public class mediaFolder {
         System.out.println("Opening " + mediaTypes.get(index).getName() + " with " + mediaTypes.get(index).getDefaultApp());
     } 
     
+   public void sortName(){
+        for(int j = 0; j < this.mediaTypes.size(); j++){
+            for(int i = 0; i < this.mediaTypes.size(); i++){
+                if (this.mediaTypes.get(i).getName().compareTo(this.mediaTypes.get(j).getName()) > 0){
+                    MediaType replace = this.mediaTypes.get(i);
+                    this.mediaTypes.set(i, this.mediaTypes.get(j));
+                    this.mediaTypes.set(j, replace);
+                }
+            }
+        }
+    }
+    public void sortGenre(){
+        for(int i = 0; i < this.mediaTypes.size(); i++){
+            for(int j = 0; j < this.mediaTypes.size(); j++){
+                if(this.mediaTypes.get(i).getGenre().equals(this.mediaTypes.get(i).getGenre())){
+                    MediaType replace = this.mediaTypes.get(i);
+                    this.mediaTypes.set(i, this.mediaTypes.get(j));
+                    this.mediaTypes.set(j, replace);
+                }
+            }
+        }
+    }
+   
     @Override
     public String toString() {
         return "mediaFolder [mediaTypes=" + mediaTypes + "]";
